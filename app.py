@@ -3,13 +3,13 @@ import re
 
 app = Flask(__name__)
 
-# CONFIG - customize these for submission
+# CONFIG - customize these with your own details for submission
 FULL_NAME = "john_doe"
-DOB = "17091999"  # ddmmyyyy
+DOB = "17091999"     # ddmmyyyy
 EMAIL = "john@xyz.com"
 ROLL_NUMBER = "ABCD123"
 
-# Helper function for alternating caps
+# Helper function for alternating caps in reverse
 def alternating_caps(s):
     result = ""
     upper = True
@@ -59,4 +59,4 @@ def bfhl():
         return jsonify({"is_success": False, "error": str(e)}), 400
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
